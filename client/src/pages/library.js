@@ -5,10 +5,11 @@ import BookContainer from "../components/bookContainer";
 import Modal from "../components/modal";
 import Search from "../components/search";
 import API from "../utils/API"
+import SaveButton from "../components/buttons/saveButton";
 
 class Library extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state = {
       data: [],
       arr1: [],
@@ -119,8 +120,12 @@ class Library extends Component {
         <Modal
           modalInfo={this.state.modalInfo}
           open={this.state.open}
-          closeModal={this.closeModal}
-          saveBook={this.saveBook} />
+          closeModal={this.closeModal}>
+          <SaveButton
+            saveBook={this.saveBook}
+            id={this.state.modalInfo.id} />
+        </Modal>
+
       </div>
     )
   }

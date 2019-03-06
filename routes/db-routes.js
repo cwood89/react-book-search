@@ -2,7 +2,7 @@ const db = require("../models/books");
 const router = require("express").Router();
 
 router.get("/db/books", (req, res) => {
-  db.Books.find().then((dbBook) => {
+  db.find().then((dbBook) => {
     res.json(dbBook)
   }).catch((err) => {
     console.log(err)
@@ -10,7 +10,7 @@ router.get("/db/books", (req, res) => {
 });
 
 router.post("/db/books", (req, res) => {
-  db.Books.create(req.body).then((dbBook) => {
+  db.create(req.body).then((dbBook) => {
     console.log(dbBook)
     res.json(dbBook)
   }).catch((err) => {
@@ -19,7 +19,7 @@ router.post("/db/books", (req, res) => {
 });
 
 router.delete("/db/books/:id", (req, res) => {
-  db.books.deleteOne({ id: req.params.id }).then((dbBook) => {
+  db.deleteOne({ id: req.params.id }).then((dbBook) => {
     console.log(dbBook)
     res.json(dbBook)
   }).catch((err) => {

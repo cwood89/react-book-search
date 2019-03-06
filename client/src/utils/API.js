@@ -12,7 +12,11 @@ export default {
   },
   // Saves book to Database
   saveBook: function (bookData) {
-    return axios.post("/db/books", bookData);
+    return axios({
+      method: 'post',
+      url: '/db/books',
+      data: bookData
+    })
   },
   // Search Google Books
   searchBooks: function (search, type) {

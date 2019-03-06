@@ -18,8 +18,7 @@ function Modal(props) {
             <p>Written by {props.modalInfo.authors}.</p>
             <p>{props.modalInfo.description}</p>
             <p>{props.modalInfo.link}</p>
-            <button className="button is-danger"
-              onClick={() => props.saveBook(props.modalInfo.id)}>Save Me!</button>
+            {props.children}
           </div>
         </div>
 
