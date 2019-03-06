@@ -15,6 +15,15 @@ if (process.env.NODE_ENV === "production") {
 };
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+var db = mongoose.connection;
+
+db.once("connected", function () {
+  console.log("Mongoose connection successful.");
+});
+
+db.on("error", function (error) {
+  console.log("DB Connection Error", error);
+})
 
 app.use(routes);
 

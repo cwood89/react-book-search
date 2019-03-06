@@ -16,19 +16,16 @@ export default {
   },
   // Search Google Books
   searchBooks: function (search, type) {
-    let result;
     switch (type) {
-      case "title":
-        result = axios.get("https://www.googleapis.com/books/v1/volumes?q=intitle:" + search);
-        break;
-      case "author":
-        result = axios.get("https://www.googleapis.com/books/v1/volumes?q=inauthor:" + search);
-        break;
-      case "genre":
-        result = axios.get("https://www.googleapis.com/books/v1/volumes?q=subject:" + search);
-        break;
+      case "Title":
+        return axios.get("https://www.googleapis.com/books/v1/volumes?q=intitle:" + search + "&maxResults=40")
+      case "Author":
+        return axios.get("https://www.googleapis.com/books/v1/volumes?q=inauthor:" + search + "&maxResults=40")
+      case "Genre":
+        return axios.get("https://www.googleapis.com/books/v1/volumes?q=subject:" + search + "&maxResults=40")
+      default:
+        return axios.get("https://www.googleapis.com/books/v1/volumes?q=intitle:" + search + "&maxResults=40")
     }
-    return result;
   },
 
 };

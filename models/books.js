@@ -6,12 +6,14 @@ var Schema = mongoose.Schema;
 
 
 var BookSchema = new Schema({
-
+  id: {
+    type: String
+  },
   title: {
-    type: String,
+    type: String
   },
   authors: {
-    type: Array,
+    type: Array
   },
   description: {
     type: String
@@ -20,7 +22,7 @@ var BookSchema = new Schema({
     type: String
   },
   link: {
-    type: String,
+    type: String
   },
   saved: {
     type: Boolean,
