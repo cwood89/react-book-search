@@ -21,5 +21,4 @@ This app uses the MERN full development stack.
 
 * Axios
 * Google Books Api
-* Socket.io
 * Bulma
