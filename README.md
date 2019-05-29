@@ -6,7 +6,7 @@ Easily search Google's "libary" and save books to your bookshelf.
 
 This app is hosted on Heroku.
 
-**Check it out [here.](https://react-book-search.herokuapp.com)**
+**Check it out [here.](https://react-book-club-cw.herokuapp.com/)**
 
 ## Tech Used
 
