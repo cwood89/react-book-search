@@ -2,7 +2,7 @@
 
 If you're like me and have an endless list of need to read books, then this is the perfect app for you!
 
-Easily search Google's "libary" and save books to your bookshelf.
+Easily search Google's "library" and save books to your bookshelf.
 
 This app is hosted on Heroku.
 
